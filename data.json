@@ -4,16 +4,20 @@
     "response": "The full name of EADE Business School is Escuela de Alta Dirección Empresarial."
   },
   {
+    "prompt": "What is EADE Business School?",
+    "response": "EADE Business School is an international business school founded in 2009 in Guatemala, specializing in undergraduate and postgraduate programs in business administration, management, and entrepreneurship. It emphasizes practical, innovative education to develop leaders, with over 15,000 alumni across Latin America."
+  },
+  {
     "prompt": "Where is the main office of EADE Business School located?",
-    "response": "The main office of EADE Business School is located at 8va calle 2-26 Zona 10, Ciudad de Guatemala, Guatemala."
+    "response": "The main office of EADE Business School is located at 8va Calle 2-26, Zona 10, Ciudad de Guatemala, Guatemala. Additional offices include 8va Calle 1-71, Zona 10, Edificio Ciudad Vieja, Of. 7 Norte, and 5 Avenida 5-55, Zona 14, Edificio Europlaza."
   },
   {
     "prompt": "When was EADE Business School founded?",
-    "response": "EADE Business School was founded in 2009."
+    "response": "EADE Business School was founded in 2009, with planning initiated in 2008 to address economic challenges in Guatemala."
   },
   {
     "prompt": "What is the mission of EADE Business School?",
-    "response": "The mission of EADE Business School is to promote holistic development of change agents through entrepreneurial, managerial, and leadership competencies with innovative and updated programs."
+    "response": "The mission of EADE Business School is to promote the holistic development of change agents through entrepreneurial, managerial, and leadership competencies using innovative and updated programs."
   },
   {
     "prompt": "What is the vision of EADE Business School?",
@@ -21,51 +25,111 @@
   },
   {
     "prompt": "What is the teaching philosophy of EADE Business School?",
-    "response": "The teaching philosophy of EADE Business School centers on personal growth, development, and well-being in business management, with immersion in real-world business dynamics through practical learning."
-  },
-  {
-    "prompt": "What undergraduate programs does EADE Business School offer?",
-    "response": "EADE Business School offers the following undergraduate programs: Bachelor in Business Administration (focused on strategic and tactical business management, organizational leadership, and digital-era competitiveness), Bachelor in Marketing and Sales (focused on marketing strategies and sales techniques), Bachelor in Industrial Engineering (focused on engineering and business principles for innovative solutions and strategic leadership), and Bachelor in Organizational Psychology (focused on understanding human behavior in organizational settings to improve workplace dynamics and leadership)."
-  },
-  {
-    "prompt": "What combined degree programs are available at EADE Business School?",
-    "response": "EADE Business School offers combined degree programs including BBA + MBA (focused on managerial and decision-making skills for business strategy and positioning), BBA + Master in Marketing (focused on business administration with advanced marketing strategies), and BBA + Master in Human Resources (focused on aligning human resources with organizational goals for leadership in national and global contexts)."
-  },
-  {
-    "prompt": "What postgraduate programs does EADE Business School offer?",
-    "response": "EADE Business School offers postgraduate programs including an MBA (focused on strategic skills and leadership development for career advancement) and various specializations for niche expertise."
+    "response": "The teaching philosophy of EADE Business School focuses on personal growth, development, and well-being in business management, with immersion in real-world business dynamics through practical learning and a mindset for thriving in change."
   },
   {
     "prompt": "What is the teaching methodology at EADE Business School?",
-    "response": "The teaching methodology at EADE Business School is 'Learning by Doing' with a case study method, featuring interactive case studies for real-world business scenarios, experienced faculty with industry expertise, and a collaborative and supportive learning environment."
+    "response": "EADE Business School employs a 'Learning by Doing' methodology with interactive case studies for real-world scenarios, experienced faculty with industry expertise, and a collaborative, supportive learning environment using andragogical principles."
+  },
+  {
+    "prompt": "What undergraduate programs does EADE Business School offer?",
+    "response": "EADE Business School offers undergraduate programs including Bachelor in Business Administration (strategic and tactical management, leadership, digital competitiveness), Bachelor in Marketing and Sales (marketing strategies, sales techniques), Bachelor in Industrial Engineering (engineering and business for innovation, leadership), and Bachelor in Organizational Psychology (human behavior for workplace dynamics, leadership)."
+  },
+  {
+    "prompt": "What are the details of the Bachelor in Business Administration at EADE Business School?",
+    "response": "The Bachelor in Business Administration at EADE Business School focuses on strategic and tactical business management, organizational leadership, and competitiveness in the digital era. It uses a 'Learning by Doing' methodology, emphasizes practical learning, and prepares students for leadership roles through industry-relevant skills and validation of prior experience for dual degrees."
+  },
+  {
+    "prompt": "What are the details of the Bachelor in Marketing and Sales at EADE Business School?",
+    "response": "The Bachelor in Marketing and Sales at EADE Business School focuses on marketing strategies and sales techniques. It is designed for competitiveness in the job market, with practical application through case studies, teamwork, and industry connections, allowing for dual-degree options via prior studies validation."
+  },
+  {
+    "prompt": "What are the details of the Bachelor in Industrial Engineering at EADE Business School?",
+    "response": "The Bachelor in Industrial Engineering at EADE Business School integrates engineering and business principles for innovative solutions and strategic leadership. The program is intensive, uses andragogical principles, and emphasizes real-world applications, preparing graduates for high-responsibility roles."
+  },
+  {
+    "prompt": "What are the details of the Bachelor in Organizational Psychology at EADE Business School?",
+    "response": "The Bachelor in Organizational Psychology at EADE Business School focuses on understanding human behavior in organizational settings to improve workplace dynamics and leadership. It includes practical learning, case studies, and benefits like market differentiation and global networking."
+  },
+  {
+    "prompt": "What combined degree programs are available at EADE Business School?",
+    "response": "EADE Business School offers combined degree programs (Doble Titulación) including integrated Bachelor and Master programs for those who did not complete higher education, such as BBA + MBA, BBA + Master in Marketing, BBA + Master in Human Resources, and BBA + MSc in Supply Chain. These are intensive, use 'Learning by Doing,' and validate prior studies or experience."
+  },
+  {
+    "prompt": "What are the details of the BBA + MBA program at EADE Business School?",
+    "response": "The BBA + MBA combined program at EADE Business School focuses on managerial and decision-making skills for business strategy and positioning. It is intensive, allows validation of prior experience, and prepares students for leadership through practical learning, enhancing competitiveness and networking."
+  },
+  {
+    "prompt": "What are the details of the BBA + Master in Marketing program at EADE Business School?",
+    "response": "The BBA + Master in Marketing at EADE Business School combines business administration with advanced marketing strategies. Designed for market differentiation, it uses case studies and andragogical principles, offering benefits like faster advancement to leadership roles and global connections."
+  },
+  {
+    "prompt": "What are the details of the BBA + Master in Human Resources program at EADE Business School?",
+    "response": "The BBA + Master in Human Resources at EADE Business School focuses on aligning human resources with organizational goals for leadership in national and global contexts. It is suitable for those validating prior studies, emphasizes teamwork and industry skills, and provides financial aid options."
+  },
+  {
+    "prompt": "What are the details of the BBA + MSc in Supply Chain program at EADE Business School?",
+    "response": "The BBA + MSc in Supply Chain at EADE Business School focuses on strategic skills in enterprise and supply chain management. The intensive format prepares graduates for high-responsibility roles, with practical application and benefits like knowledge benchmarking and network growth."
+  },
+  {
+    "prompt": "What postgraduate programs does EADE Business School offer?",
+    "response": "EADE Business School offers postgraduate programs including an MBA (strategic skills, leadership for career advancement) and specializations in Marketing, Human Resources, Supply Chain, and Finance. Programs are intensive, use 'Learning by Doing,' and aim for rapid progression to leadership positions."
+  },
+  {
+    "prompt": "What are the details of the MBA program at EADE Business School?",
+    "response": "The MBA at EADE Business School develops strategic skills and leadership for career advancement, focusing on administration, innovation, and global business. Delivered in an intensive format with practical learning, it enhances decision-making and positions graduates for higher responsibilities."
+  },
+  {
+    "prompt": "What are the details of the Master in Marketing specialization at EADE Business School?",
+    "response": "The Master in Marketing specialization at EADE Business School emphasizes advanced marketing strategies. It integrates real-world applications, mentorship from experts, and prepares students for leadership by fostering competitiveness and professional networks."
+  },
+  {
+    "prompt": "What are the details of the Master in Human Resources specialization at EADE Business School?",
+    "response": "The Master in Human Resources at EADE Business School focuses on HR alignment with organizational goals. The program uses case studies for practical skills, offers financial assistance, and benefits include market differentiation and global networking opportunities."
+  },
+  {
+    "prompt": "What are the details of the Master in Supply Chain specialization at EADE Business School?",
+    "response": "The Master in Supply Chain at EADE Business School develops strategic enterprise management skills. Intensive and collaborative, it prepares for leadership through industry connections and emphasizes innovation for a changing business landscape."
+  },
+  {
+    "prompt": "What are the details of the Master in Finance specialization at EADE Business School?",
+    "response": "The Master in Finance specialization at EADE Business School focuses on financial management and strategic skills. It uses 'Learning by Doing' for real-world application, with benefits like faster career advancement and knowledge assessment among peers."
   },
   {
     "prompt": "What are the key features of EADE Business School's programs?",
-    "response": "EADE Business School's programs are intensive, use a 'Learning by Doing' methodology with andragogical principles and case studies, offer dual-degree options by validating prior studies and professional experience, and emphasize real-world applications, teamwork, and industry-relevant skills."
+    "response": "EADE Business School's programs are intensive, use a 'Learning by Doing' methodology with case studies and andragogical principles, offer dual-degree options via prior experience validation, and emphasize real-world applications, teamwork, leadership, and industry-relevant skills for competitiveness."
+  },
+  {
+    "prompt": "What are the benefits of studying at EADE Business School?",
+    "response": "Benefits of studying at EADE Business School include enhanced competitiveness, preparation for leadership roles, market differentiation through advanced skills, knowledge benchmarking with peers, expansion of professional networks, innovative practical education, and direct financial support."
   },
   {
     "prompt": "How does the admissions process work at EADE Business School?",
-    "response": "The admissions process at EADE Business School involves a selective evaluation based on candidate profiles, with personalized advisor support and an online application."
+    "response": "The admissions process at EADE Business School involves a selective evaluation of candidate profiles, with personalized advisor support and an online application. Candidates may validate prior studies or experience for integrated programs, and financial aid is available via admissions contact."
   },
   {
     "prompt": "What financial aid options are available at EADE Business School?",
-    "response": "EADE Business School offers scholarships and financial aid based on criteria such as academic excellence, leadership commitment, and passion for business. Candidates should schedule an appointment with the Admissions Department to apply."
+    "response": "EADE Business School offers scholarships and financial aid based on academic excellence, leadership commitment, and passion for business. Candidates must schedule an appointment with the Admissions Department to apply and discuss support options."
   },
   {
     "prompt": "Where are EADE Business School's campuses located?",
-    "response": "EADE Business School has multiple campuses across Central America, with the main campus in Guatemala City."
+    "response": "EADE Business School has multiple campuses across Central America, with the main campus in Guatemala City, Guatemala, and corporate offices at 8va Calle 2-26, Zona 10, 8va Calle 1-71, Zona 10, and 5 Avenida 5-55, Zona 14."
   },
   {
     "prompt": "What are the facilities like at EADE Business School?",
-    "response": "EADE Business School's facilities are modern and designed to inspire creativity and collaboration, with campus tours available for prospective students."
+    "response": "EADE Business School's facilities are modern, designed to inspire creativity and collaboration, with spaces for practical learning, industry integration, and supportive environments. Campus tours are available for prospective students to explore classrooms and other resources."
   },
   {
     "prompt": "What are the outcomes for EADE Business School alumni?",
-    "response": "EADE Business School has over 15,000 graduates, with 90% promoted within one year, an average 35% salary increase, and 42% launching successful ventures."
+    "response": "EADE Business School has over 15,000 graduates, with 90% promoted within one year, an average 35% salary increase, and 42% launching successful ventures. Alumni achieve significant career advancements, secure leadership roles, and contribute to innovation and community development."
+  },
+  {
+    "prompt": "What is an example of an EADE Business School alumni success story?",
+    "response": "Dr. Alejandro Andrews, an EADE alumni with an MBA, experienced significant career changes in medicine after studying at EADE Business School, allowing him to expand his field and achieve professional success."
   },
   {
     "prompt": "What partnerships does EADE Business School have?",
-    "response": "EADE Business School is partnered with CLADEA, HACU, Grupo Educativo EADE, and the Guatemala Chamber of Commerce."
+    "response": "EADE Business School partners with CLADEA, HACU, Grupo Educativo EADE, Excel Escuela de Negocios, Everest Escuela de Negocios, and the Guatemala Chamber of Commerce for academic delivery, industry collaboration, and global networking."
   },
   {
     "prompt": "What career advantages does EADE Business School provide?",
@@ -73,10 +137,174 @@
   },
   {
     "prompt": "How can I contact EADE Business School?",
-    "response": "You can contact EADE Business School by phone at +502 2315 9868 or +502 2269 1300, by email at info@eade.org.es, or visit their address at 8va calle 2-26 Zona 10, Ciudad de Guatemala. They are also active on social media platforms including Facebook, Twitter, Instagram, YouTube, and LinkedIn."
+    "response": "Contact EADE Business School by phone at +502 2315 9868 or +502 2269 1300, email at info@eade.gt, or visit 8va Calle 2-26, Zona 10, Ciudad de Guatemala. They are active on Facebook (@EADE.GT), Instagram (@eade.gt), Twitter (@EADEBS), LinkedIn, and YouTube. Operating hours: Mon-Fri 8:30 AM–9:00 PM, Sat 8:30 AM."
   },
   {
     "prompt": "What additional features does EADE Business School offer?",
-    "response": "EADE Business School offers a mobile app to track grades, attendance, and behavioral reports, a blog with business tips, trends, and entrepreneurial insights, and direct financial aid options."
+    "response": "EADE Business School offers a mobile app for tracking grades, attendance, and reports, a blog with business tips and trends, 100% virtual program options, direct financial aid, industry connections for practical learning, and mentorship from expert professionals."
+  },
+  {
+    "prompt": "What is the history of EADE Business School?",
+    "response": "EADE Business School was founded in 2009 in Guatemala, planned in 2008 by professionals addressing the global financial crisis's impact. It has grown into an international institution with over 15,000 alumni, focusing on practical education, leadership, and societal impact."
+  },
+  {
+    "prompt": "What is the academic focus of EADE Business School?",
+    "response": "EADE Business School focuses on business administration, management, and entrepreneurship, emphasizing practical, innovative education through 'Learning by Doing,' case studies, and industry integration to develop competitive leaders for national and international roles."
+  },
+  {
+    "prompt": "What are the operating hours of EADE Business School's offices?",
+    "response": "EADE Business School's offices operate Monday to Friday from 8:30 AM to 9:00 PM and Saturdays from 8:30 AM, with specific end times varying by location in Guatemala City."
+  },
+  {
+    "prompt": "What are the five key benefits of EADE's combined programs?",
+    "response": "The five key benefits of EADE's combined programs are: 1. Enhanced competitiveness with updated skills; 2. Preparation for leadership roles; 3. Market differentiation as specialists; 4. Knowledge assessment among peers; 5. Network growth with high-profile professionals."
+  },
+  {
+    "prompt": "How does EADE Business School support financial assistance?",
+    "response": "EADE Business School supports financial assistance through scholarships based on merit and need, with candidates contacting the Admissions Department for evaluation and application, making education accessible for passionate business students."
+  },
+  {
+    "prompt": "What is the 'Doble Titulación' at EADE Business School?",
+    "response": "Doble Titulación at EADE Business School refers to combined Bachelor and Master programs, allowing students to achieve dual degrees efficiently, especially for those validating prior higher education or experience, in an intensive format."
+  },
+  {
+    "prompt": "How does EADE prepare students for leadership?",
+    "response": "EADE prepares students for leadership through strategic skill development, practical 'Learning by Doing' experiences, mentorship from industry experts, global networking, and programs focused on decision-making and high-responsibility roles."
+  },
+  {
+    "prompt": "What is the intensive format in EADE programs?",
+    "response": "The intensive format in EADE programs allows for faster completion with focused, practical learning, integrating real-world applications and andragogical principles to accelerate career advancement and goal achievement."
+  },
+  {
+    "prompt": "What mentorship does EADE offer?",
+    "response": "EADE offers mentorship from expert professionals with industry expertise, providing guidance in programs to apply knowledge practically and build skills for professional success and leadership."
+  },
+  {
+    "prompt": "What global connections does EADE provide?",
+    "response": "EADE provides global connections through partnerships like CLADEA and HACU, international networking opportunities, and programs that prepare students for national and global business contexts."
+  },
+  {
+    "prompt": "What is a success story from EADE alumni?",
+    "response": "José Javier Castillo graduated as an MBA in International Management from EADE Barcelona and CENTRUM Católica Graduate Business School, showcasing EADE's impact on international career growth."
+  },
+  {
+    "prompt": "What events does EADE host?",
+    "response": "EADE hosts events like alumni meet-ups, though specific 2025 details are limited; related schools like EADA have annual meetings focusing on entrepreneurship, innovation, and leadership."
+  },
+  {
+    "prompt": "What is the blog content at EADE?",
+    "response": "EADE's blog features articles on business tips, trends, leadership, entrepreneurship, and innovations, though specific posts are not detailed; it aligns with the school's philosophy of practical and updated knowledge."
+  },
+  {
+    "prompt": "What faculty information is available for EADE?",
+    "response": "Specific EADE faculty details are limited, but programs feature experienced professionals with industry expertise, providing mentorship and real-world insights in business and management fields."
+  },
+  {
+    "prompt": "What reviews do EADE alumni provide?",
+    "response": "EADE alumni reviews highlight career advancements, such as promotions and ventures, with stories like Dr. Alejandro Andrews expanding his medical field post-MBA, emphasizing practical skills and networking."
+  },
+  {
+    "prompt": "What is the eligibility for combined programs at EADE?",
+    "response": "Eligibility for EADE's combined programs includes those who did not complete higher education, with validation of prior studies or experience, and selective profile evaluation through admissions."
+  },
+  {
+    "prompt": "How does EADE foster market differentiation?",
+    "response": "EADE fosters market differentiation by advancing students from Bachelor's to Master's levels, providing specialized skills and standing out in competitive job markets through innovative education."
+  },
+  {
+    "prompt": "What is knowledge benchmarking at EADE?",
+    "response": "Knowledge benchmarking at EADE involves comparing skills with peers in collaborative environments, learning from experiences to enhance personal and professional development."
+  },
+  {
+    "prompt": "What network growth opportunities does EADE offer?",
+    "response": "EADE offers network growth through connections with high-profile professionals, global partnerships, and programs that facilitate business and support opportunities for graduates."
+  },
+  {
+    "prompt": "What practical learning approaches does EADE use?",
+    "response": "EADE uses practical learning approaches like case studies, industry integrations, and 'Learning by Doing' to ensure immediate application of knowledge in professional settings."
+  },
+  {
+    "prompt": "What is the focus of EADE's MBA curriculum?",
+    "response": "The focus of EADE's MBA curriculum is on strategic skills, leadership, decision-making, and global business, with an intensive format for career advancement."
+  },
+  {
+    "prompt": "How does EADE support career advancement?",
+    "response": "EADE supports career advancement through faster progression to leadership roles, salary increases, promotions, and entrepreneurial ventures, as evidenced by alumni outcomes."
+  },
+  {
+    "prompt": "What is the role of mentorship in EADE programs?",
+    "response": "Mentorship in EADE programs involves guidance from expert professionals, helping students apply knowledge practically and develop skills for success in business and leadership."
+  },
+  {
+    "prompt": "What international aspects does EADE emphasize?",
+    "response": "EADE emphasizes international aspects through global networking, partnerships like HACU, and programs preparing for national and international high-responsibility roles."
+  },
+  {
+    "prompt": "What is an example of EADE's innovative education?",
+    "response": "An example of EADE's innovative education is the 'Learning by Doing' methodology, integrating case studies and real-world scenarios for immediate professional application."
+  },
+  {
+    "prompt": "What financial support does EADE provide for maestrías?",
+    "response": "EADE provides financial support for maestrías through scholarships and assistance, with candidates contacting admissions for evaluation based on merit and need."
+  },
+  {
+    "prompt": "How does EADE position graduates in the market?",
+    "response": "EADE positions graduates in the market as specialists and leaders, differentiating them from Bachelor's holders through advanced skills and Master's qualifications."
+  },
+  {
+    "prompt": "What collaborative learning does EADE promote?",
+    "response": "EADE promotes collaborative learning through supportive environments, peer interactions, and teamwork in case studies, fostering knowledge sharing and network building."
+  },
+  {
+    "prompt": "What is the impact of EADE on alumni careers?",
+    "response": "The impact of EADE on alumni careers includes 90% promotion rates, 35% salary increases, leadership roles, and 42% successful ventures, driving innovation and excellence."
+  },
+  {
+    "prompt": "What partnerships enhance EADE's program delivery?",
+    "response": "Partnerships with Excel and Everest Escuela de Negocios enhance EADE's program delivery, providing academic and industry collaboration for practical education."
+  },
+  {
+    "prompt": "What is CLADEA's role in EADE partnerships?",
+    "response": "CLADEA (Consejo Latinoamericano de Escuelas de Administración) partners with EADE for regional academic collaboration, supporting best practices in business education."
+  },
+  {
+    "prompt": "What is HACU's role in EADE partnerships?",
+    "response": "HACU (Hispanic Association of Colleges and Universities) partners with EADE to promote Hispanic education and international opportunities in business programs."
+  },
+  {
+    "prompt": "What is the Guatemala Chamber of Commerce partnership with EADE?",
+    "response": "The Guatemala Chamber of Commerce partners with EADE for industry linkages, supporting practical training and career advantages in the local business landscape."
+  },
+  {
+    "prompt": "What events are planned for EADE in 2025?",
+    "response": "While specific EADE events for 2025 are limited, related activities include alumni meet-ups and annual meetings focusing on entrepreneurship and leadership, similar to partner schools."
+  },
+  {
+    "prompt": "What webinars does EADE offer?",
+    "response": "EADE offers webinars on business trends, leadership, and innovations, though details are sparse; they align with the blog and philosophy for continuous professional updates."
+  },
+  {
+    "prompt": "What is the mobile app feature at EADE?",
+    "response": "The mobile app at EADE allows students to track grades, attendance, behavioral reports, and other academic progress in real-time."
+  },
+  {
+    "prompt": "What virtual options does EADE provide?",
+    "response": "EADE provides 100% virtual program options for flexibility, maintaining the intensive 'Learning by Doing' methodology through online case studies and collaborations."
+  },
+  {
+    "prompt": "What is the blog's role at EADE?",
+    "response": "EADE's blog shares business tips, trends, entrepreneurial insights, and leadership articles, supporting the school's vision of innovative and updated professional development."
+  },
+  {
+    "prompt": "What alumni networks does EADE have?",
+    "response": "EADE has alumni networks for over 15,000 graduates, facilitating meet-ups, success sharing, and ongoing connections for career growth and community impact."
+  },
+  {
+    "prompt": "What is a recent EADE X post about?",
+    "response": "A recent EADE X post promotes studying specialties with financial support from Fundación Génesis Empresarial, encouraging big dreams for the 2022 cycle (historical post)."
+  },
+  {
+    "prompt": "What reviews highlight about EADE programs?",
+    "response": "Reviews highlight EADE programs' practical focus, leadership preparation, and career impacts, with alumni like Dr. Andrews noting significant professional expansions."
   }
 ]
