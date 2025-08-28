@@ -18,6 +18,7 @@ debugpy==1.8.16
 decorator==5.2.1
 dill==0.3.8
 executing==2.2.0
+flask==3.1.0
 filelock==3.19.1
 Flask==3.1.2
 frozenlist==1.7.0
