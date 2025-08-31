@@ -1,0 +1,94 @@
+[
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "hello",
+    "bot_response": "Good morning! I'm here to help with information about EADE Business School. How can I assist you?",
+    "intent": "general",
+    "entities": {},
+    "confidence": 0.9,
+    "timestamp": "2025-08-31T10:16:31.731808"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "rating": 1,
+    "comment": "",
+    "timestamp": "2025-08-31T10:16:39.390067",
+    "type": "feedback"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "what is the full name of this school",
+    "bot_response": "EADE Business School is an educational institution known as Escuela de Alta DirecciÃ³n Empresarial.",
+    "intent": "general",
+    "entities": {},
+    "confidence": 0.6041203141212463,
+    "timestamp": "2025-08-31T10:17:10.342373"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "hello",
+    "bot_response": "Hello again! How can I help you with EADE today?",
+    "intent": "general",
+    "entities": {},
+    "confidence": 0.9,
+    "timestamp": "2025-08-31T10:21:23.290697"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "how are you?",
+    "bot_response": "Hello again! How can I help you with EADE today?",
+    "intent": "general",
+    "entities": {},
+    "confidence": 0.9,
+    "timestamp": "2025-08-31T10:21:32.005203"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "what is the full name of this school",
+    "bot_response": "The full name of EADE Business School is Escuela de Alta DirecciÓn Empresarial.",
+    "intent": "general",
+    "entities": {},
+    "confidence": 0.6041203141212463,
+    "timestamp": "2025-08-31T10:21:52.203060"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "where is the campus?",
+    "bot_response": "Thank you for your interest in EADE Business School. Our main campus is located in Guatemala City, Guatemala, and our corporate offices are in the following addresses: 8va Calle 2-26, Zona 10, 8va Calle 1-71, Zona 10, and 5 Avenida 5-55, Zona 14. Is there anything else I can assist you with? Need directions to our campus?",
+    "intent": "location",
+    "entities": {},
+    "confidence": 0.6603838205337524,
+    "timestamp": "2025-08-31T10:22:27.260159"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "how many alumnis are there ?",
+    "bot_response": "As of now, EADE Business School has over 15,000 alumni worldwide, with a strong alumni network that fosters ongoing connections, career growth opportunities, and community impact.",
+    "intent": "general",
+    "entities": {},
+    "confidence": 0.6689677238464355,
+    "timestamp": "2025-08-31T10:22:58.256175"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "what are the main programs of this school?",
+    "bot_response": "Dear user, EADE Business School offers a variety of programs that cater to different learning styles and career goals. Our intensive programs utilize a 'Learning by Doing' methodology, incorporating case studies and andragogical principles to provide a practical and engaging learning experience. Our dual-degree options allow students to further validate their prior experiences, while emphasizing real-world applications, teamwork, leadership, and industry-relevant skills for competitiveness. Our programs include Executive MBA, Master of Business Administration, Master of Science in Business Analytics, Master of Science in Digital Marketing, and more. Would you like more information on any of these programs?",
+    "intent": "general",
+    "entities": {},
+    "confidence": 0.6039308309555054,
+    "timestamp": "2025-08-31T10:23:45.098890"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "tell me about Executive MBA?",
+    "bot_response": "An Executive MBA (Master of Business Administration) is a highly specialized and comprehensive program designed for working professionals who want to enhance their leadership skills, strategic thinking, and decision-making abilities. This program is delivered in an intensive format, allowing participants to balance their work and personal life while pursuing their academic goals. EADE Business School's Executive MBA program focuses on administration, innovation, and global business, providing participants with a deep understanding of the latest management practices and strategies. Graduates of this program are well-positioned for higher responsibilities in their respective organizations, as they develop the skills necessary to lead and manage teams effectively.",
+    "intent": "general",
+    "entities": {
+      "programs": [
+        "mba"
+      ]
+    },
+    "confidence": 0.7538950443267822,
+    "timestamp": "2025-08-31T10:27:00.644503"
+  }
+]

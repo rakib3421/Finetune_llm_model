@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EADE Business School Chatbot</title>
+    <title>EADE Business School - Enhanced AI Assistant</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -240,6 +240,8 @@
             border-bottom-left-radius: 8px;
             margin-left: 4px;
         }
+
+
 
         .message-avatar {
             width: 44px;
@@ -796,14 +798,14 @@
         <div class="chat-header">
             <div class="online-status">
                 <div class="online-dot"></div>
-                <span>Online</span>
+                <span>Learning</span>
             </div>
             <div class="chat-header-content">
                 <h1>
                     <i class="fas fa-graduation-cap"></i>
-                    EADE Business School Virtual Receptionist
+                    EADE Business School Enhanced AI Assistant
                 </h1>
-                <p>Your intelligent AI assistant for admissions, programs, and campus information</p>
+                <p>Intelligent AI with continuous learning & advanced NLP capabilities</p>
             </div>
         </div>
         
@@ -1164,6 +1166,30 @@
             }
         `;
         document.head.appendChild(style);
+        
+        // Load learning statistics
+        async function loadLearningStats() {
+            try {
+                const response = await fetch('/learning_stats');
+                const data = await response.json();
+                
+                if (data.status === 'success') {
+                    // You can display these stats somewhere in the UI
+                    console.log('Learning Stats:', {
+                        conversations: data.total_conversations,
+                        learned_patterns: data.learned_patterns,
+                        knowledge_base_size: data.knowledge_base_size,
+                        recent_activity: data.recent_conversations
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading learning stats:', error);
+            }
+        }
+
+        // Load stats periodically
+        loadLearningStats();
+        setInterval(loadLearningStats, 60000); // Every minute
     </script>
 </body>
 </html>
