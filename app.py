@@ -7,10 +7,21 @@ import faiss
 from flask import Flask, render_template, request, jsonify, session
 from datetime import datetime
 import re
+from llama_cpp import Llama
 
 # Load data
 with open('data.json', 'r') as f:
     data = json.load(f)
+
+# Load StableLM model
+print("Loading StableLM model...")
+llm = Llama(
+    model_path="stablelm-2-zephyr-1.6B-finetuned-F16.gguf",
+    n_ctx=4096,
+    n_threads=4,
+    verbose=False
+)
+print("Model loaded successfully!")
 
 # Initialize RAG components
 retriever_model = SentenceTransformer('all-MiniLM-L6-v2')
@@ -70,7 +81,7 @@ def get_contextual_response(input_text, session_id, conversation_history):
         if not conversation_history:
             return get_greeting_response(input_text)
         else:
-            return "Hello again! How else can I help you with EADE Business School today?"
+            return "Hello again! How can I help you with EADE today?"
     
     # Check if it's a farewell
     if detect_farewell(input_text):
@@ -80,11 +91,11 @@ def get_contextual_response(input_text, session_id, conversation_history):
     if len(conversation_history) > 0:
         last_response = conversation_history[-1].get('response', '')
         if 'program' in last_response.lower() and any(word in input_text.lower() for word in ['tell me more', 'details', 'more info', 'what about', 'how about']):
-            return "I'd be happy to provide more details! Could you specify which program you're interested in? We offer Bachelor programs in Business Administration, Marketing and Sales, Industrial Engineering, and Organizational Psychology, plus various Master's and combined degree programs."
+            return "Sure! Which program interests you? We offer programs in Business, Marketing, Engineering, and Psychology."
     
     # If the question seems too general or unclear, provide helpful guidance
     if len(input_text.split()) < 3 and not any(word in input_text.lower() for word in ['what', 'how', 'when', 'where', 'why', 'who']):
-        return "I'm here to help! Could you please be a bit more specific about what you'd like to know about EADE Business School? I can provide information about our programs, admissions, campus locations, or any other questions you might have."
+        return "Please be more specific about what you'd like to know about EADE. I can help with programs, admissions, or campus info."
     
     return None
 
@@ -93,20 +104,20 @@ def get_greeting_response(input_text):
     current_hour = datetime.now().hour
     
     if 'morning' in input_text.lower() or (5 <= current_hour < 12):
-        return "Good morning! What a wonderful day to learn about EADE Business School. I'm your virtual receptionist, ready to help you with information about our programs, application process, facilities, or any other questions. How can I assist you this morning?"
+        return "Good morning! I'm here to help with information about EADE Business School. How can I assist you?"
     elif 'afternoon' in input_text.lower() or (12 <= current_hour < 17):
-        return "Good afternoon! I hope you're having a great day. Welcome to EADE Business School's information desk. I'm here to help you with questions about our business programs, admissions, campus life, or anything else you'd like to know. What brings you here today?"
+        return "Good afternoon! Welcome to EADE Business School. What can I help you with today?"
     elif 'evening' in input_text.lower() or (17 <= current_hour < 22):
-        return "Good evening! Thank you for visiting EADE Business School. Even though it's evening, I'm here and ready to help you with any information you need about our programs, admissions process, or facilities. What would you like to know?"
+        return "Good evening! I'm here to answer your questions about EADE. What would you like to know?"
     else:
-        return "Hello! Welcome to EADE Business School. I'm your virtual receptionist, and I'm here to assist you with any questions about our programs, admissions, campus facilities, or anything else you'd like to know. How may I help you today?"
+        return "Hello! I'm your EADE Business School virtual assistant. How can I help you?"
 
 def get_farewell_response(input_text):
     """Get appropriate farewell response"""
     if 'thank' in input_text.lower():
-        return "You're very welcome! I'm so glad I could help you today. If you have any more questions about EADE Business School, our programs, or anything else, please don't hesitate to ask. I'm always here to assist prospective and current students. Have a wonderful day!"
+        return "You're welcome! Glad I could help. Feel free to ask if you have more questions about EADE."
     else:
-        return "Goodbye! It was wonderful talking with you today. Thank you for your interest in EADE Business School. I hope to see you again soon, whether as a prospective student or when you need more information. Have a fantastic day!"
+        return "Goodbye! Thank you for your interest in EADE Business School. Have a great day!"
 
 def chatbot_response(input_text, session_id=None, top_k=1, similarity_threshold=None):
     """Enhanced chatbot response with context awareness and receptionist behavior"""
@@ -128,7 +139,7 @@ def chatbot_response(input_text, session_id=None, top_k=1, similarity_threshold=
             })
             return contextual_response
         
-        # Use RAG for specific questions
+        # Get relevant context from RAG
         query_embedding = retriever_model.encode([input_text], convert_to_numpy=True)
         distances, indices = faiss_index.search(query_embedding, top_k)
         best_idx = int(indices[0][0])
@@ -136,46 +147,63 @@ def chatbot_response(input_text, session_id=None, top_k=1, similarity_threshold=
 
         # If a threshold is provided, optionally enforce it
         if similarity_threshold is not None and best_distance > similarity_threshold:
-            return "I'm sorry, I don't have specific information about that in my knowledge base. However, I'd be happy to help you with questions about EADE Business School's programs, admissions, campus locations, or connect you with someone who can provide more detailed assistance. What specific aspect of EADE would you like to know about?"
+            return "I don't have specific information about that. I can help with EADE's programs, admissions, or campus details. What would you like to know?"
 
-        # Return the stored response exactly (trim whitespace). If long, return first sentence.
-        resp = responses[best_idx].strip()
-        # Remove unwanted phrase if present
-        resp = resp.replace("this should not come", "").strip()
-        
-        # Add a personal touch as a receptionist
-        if 'programs' in input_text.lower() and 'offer' in resp.lower():
-            resp += " Would you like me to provide more details about any specific program that interests you?"
+        # Get the stored response as context
+        context_response = responses[best_idx].strip()
+        context_response = context_response.replace("this should not come", "").strip()
+
+        # Create a prompt for the LLM using the context
+        system_prompt = """You are a helpful virtual receptionist for EADE Business School. You should:
+- Be friendly and professional
+- Provide direct, concise answers in 2-3 sentences maximum
+- Focus only on the main answer to the user's question
+- Avoid unnecessary elaboration or additional information
+- Keep responses brief and to the point
+
+Use the following context information to answer the user's question:"""
+
+        user_prompt = f"Context: {context_response}\n\nUser question: {input_text}\n\nProvide a concise response (2-3 sentences max) focusing on the main answer."
+
+        # Generate response using StableLM
+        try:
+            output = llm(
+                f"<|system|>{system_prompt}<|user|>{user_prompt}<|assistant|>",
+                max_tokens=128,
+                temperature=0.3,
+                top_p=0.8,
+                stop=["<|user|>", "<|system|>"],
+                echo=False
+            )
+            generated_response = output["choices"][0]["text"].strip()
+        except Exception as e:
+            print(f"LLM generation error: {e}")
+            # Fallback to original response
+            generated_response = context_response
+
+        # Add personal touches based on the query type (keep minimal)
+        if 'programs' in input_text.lower() and 'offer' in generated_response.lower():
+            generated_response += " Would you like details about a specific program?"
         elif 'location' in input_text.lower() or 'address' in input_text.lower():
-            resp += " Would you like directions or information about visiting our campus?"
+            generated_response += " Need directions to our campus?"
         elif 'admission' in input_text.lower() or 'apply' in input_text.lower():
-            resp += " I can provide more details about the application process if you're interested!"
-        
-        # Return only the first sentence to keep answers concise, but more conversational
-        if '.' in resp:
-            sentences = resp.split('.')
-            if len(sentences) > 1 and len(sentences[0].strip()) > 0:
-                response = sentences[0].strip() + '.'
-                # # Add follow-up if appropriate
-                # if not any(word in response.lower() for word in ['would you like', 'can provide', 'i can']):
-                #     response += " Is there anything specific you'd like to know more about?"
-                # resp = response
-        
+            generated_response += " Interested in the application process?"
+
         # Store in conversation history
         conversation_contexts[session_id].append({
             'user_input': input_text,
-            'response': resp,
+            'response': generated_response,
             'timestamp': datetime.now().isoformat()
         })
-        
+
         # Keep conversation history manageable (last 10 exchanges)
         if len(conversation_contexts[session_id]) > 10:
             conversation_contexts[session_id] = conversation_contexts[session_id][-10:]
-        
-        return resp
+
+        return generated_response
     except Exception as e:
         print(f"Error in chatbot_response: {str(e)}")  # Debug logging
-        return f"I apologize, but I'm experiencing a technical issue right now. Please try again in a moment, or feel free to contact EADE Business School directly for immediate assistance."
+        return "I'm experiencing a technical issue. Please try again or contact EADE Business School directly."
     
 # Initialize Flask app
 app = Flask(__name__)
@@ -210,7 +238,7 @@ def chat():
         })
     except Exception as e:
         return jsonify({
-            'error': f'I apologize, but I encountered an error while processing your request. Please try again or contact EADE Business School directly for assistance. Error: {str(e)}',
+            'error': 'I encountered an error processing your request. Please try again or contact EADE directly.',
             'status': 'error'
         }), 500
 
@@ -231,7 +259,7 @@ def reset_conversation():
         })
     except Exception as e:
         return jsonify({
-            'error': f'Error resetting conversation: {str(e)}',
+            'error': 'Error resetting conversation. Please try again.',
             'status': 'error'
         }), 500
 
