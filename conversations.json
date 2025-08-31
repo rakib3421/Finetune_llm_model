@@ -90,5 +90,112 @@
     },
     "confidence": 0.7538950443267822,
     "timestamp": "2025-08-31T10:27:00.644503"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "how can i get admission in this school?",
+    "bot_response": "Hello! I'm glad to assist you with your admission inquiry at EADE Business School. Our admissions process involves a selective evaluation of candidate profiles, where we consider factors like academic performance, work experience, and personal goals. To apply, you can visit our website and fill out the online application form. Additionally, you can contact our admissions office for personalized support and guidance throughout the process. We also offer financial aid for eligible candidates. Please let me know if you need any further assistance. Interested in the application process?",
+    "intent": "admission",
+    "entities": {},
+    "confidence": 0.6483322381973267,
+    "timestamp": "2025-08-31T10:36:22.931093"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "tell me the application process?",
+    "bot_response": "Dear applicant,\n\nThank you for your interest in EADE Business School. The application process at our institution involves a selective evaluation of candidate profiles. We recommend that you carefully review our website for program details, admission requirements, and application guidelines.\n\nTo apply, please fill out our online application form, which includes personal information, academic records, and other relevant documents. You may also request a personalized advisor to guide you through the application process.\n\nFor integrated programs, you may validate prior studies or experience. If you require financial aid, please contact our admissions office for more information.\n\nWe look forward to receiving your application and supporting you throughout the admissions process.\n\nBest regards,\n\n[Your Name]\n\nEADE Business School Interested in the application process?",
+    "intent": "admission",
+    "entities": {},
+    "confidence": 0.5379033386707306,
+    "timestamp": "2025-08-31T10:37:30.474043"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "Tell me about EADE's MBA program",
+    "bot_response": "EADE's MBA program is an intensive, practical learning experience designed to develop strategic skills and leadership for career advancement. It focuses on administration, innovation, and global business, providing graduates with a competitive edge in the job market. The program is delivered in a format that enhances decision-making and positions graduates for higher responsibilities. With a strong emphasis on practical learning, EADE's MBA program is an excellent choice for professionals looking to advance their careers in the field of management.",
+    "intent": "programs",
+    "entities": {
+      "programs": [
+        "mba"
+      ]
+    },
+    "confidence": 0.8585440218448639,
+    "timestamp": "2025-08-31T12:18:21.166989"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "What are the admission requirements?",
+    "bot_response": "Dear user, thank you for reaching out to EADE Business School. To be eligible for our combined programs, applicants must not have completed higher education and must have either validated prior studies or work experience. We evaluate applicants' profiles during the selection process. If you have any further questions, please do not hesitate to ask. We are here to assist you. Interested in the application process?",
+    "intent": "admission",
+    "entities": {},
+    "confidence": 0.6054469347000122,
+    "timestamp": "2025-08-31T12:19:20.319124"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "Scholarship opportunities",
+    "bot_response": "Please be more specific about what you'd like to know about EADE. I can help with programs, admissions, or campus info.",
+    "intent": "fees",
+    "entities": {},
+    "confidence": 0.9,
+    "timestamp": "2025-08-31T12:19:37.278244"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "tell me about scholership",
+    "bot_response": "Greetings! At EADE Business School, we offer various scholarship opportunities for our students. Our mission is to promote the holistic development of change agents through entrepreneurial, managerial, and leadership competencies using innovative and updated programs. We have different types of scholarships, including need-based, merit-based, and corporate scholarships. For more information on our scholarships, please visit our website or contact our admissions office. Is there anything else I can help you with?",
+    "intent": "general",
+    "entities": {},
+    "confidence": 0.286274790763855,
+    "timestamp": "2025-08-31T12:20:17.199686"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "Career services and job placement",
+    "bot_response": "Thank you for your interest in EADE Business School. Our career services team is dedicated to providing graduates with the best possible job placement opportunities. They work closely with our alumni to ensure that our graduates are well-positioned in the job market, with specialized skills and a strong network. They offer a variety of services, including resume and cover letter reviews, mock interviews, and job search strategies. Additionally, our job board is regularly updated with the latest job openings in the market. Would you like more information on these services or do you have any other questions?",
+    "intent": "general",
+    "entities": {},
+    "confidence": 0.4888613820075989,
+    "timestamp": "2025-08-31T12:29:13.265852"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "Online learning options",
+    "bot_response": "Dear user,\n\nThank you for reaching out to EADE Business School. We offer a variety of online learning options that cater to different learning styles and preferences. Our courses are designed to provide practical learning experiences through case studies, industry integrations, and 'Learning by Doing' methods, ensuring that the knowledge gained is immediately applicable in professional settings.\n\nSome of our popular online learning options include:\n\n1. Executive MBA: A comprehensive program that combines theory and practical applications to develop leadership skills and enhance career prospects.\n2. Open Learning Program: Flexible, self-paced courses that allow you to learn at your own pace and on your own schedule.\n3. Specialized Programs: Tailored programs that focus on specific areas of business, such as finance, marketing, or",
+    "intent": "general",
+    "entities": {},
+    "confidence": 0.4670180082321167,
+    "timestamp": "2025-08-31T12:34:17.428660"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "hello",
+    "bot_response": "Hello again! How can I help you with EADE today?",
+    "intent": "general",
+    "entities": {},
+    "confidence": 0.9,
+    "timestamp": "2025-08-31T13:39:52.185287"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "how are you?",
+    "bot_response": "Hello again! How can I help you with EADE today?",
+    "intent": "general",
+    "entities": {},
+    "confidence": 0.9,
+    "timestamp": "2025-08-31T13:40:02.134287"
+  },
+  {
+    "session_id": "session_20250831_091456_0",
+    "user_input": "Tell me about EADE's MBA program",
+    "bot_response": "EADE's MBA program is an intensive, practical learning experience designed to develop strategic skills and leadership for career advancement. It focuses on administration, innovation, and global business, providing graduates with a competitive edge in the job market. The program is delivered in a format that enhances decision-making and positions graduates for higher responsibilities. With a strong emphasis on practical learning, EADE's MBA program is an excellent choice for professionals looking to advance their careers in the field of management. The programs offered include an MBA, which is an advanced degree that provides graduates with the skills and knowledge necessary to succeed in today's competitive business environment. The MBA program at EADE Business School is tailored to meet the needs of working professionals, offering a flexible schedule that allows for part-time Would you like details about a specific program?",
+    "intent": "programs",
+    "entities": {
+      "programs": [
+        "mba"
+      ]
+    },
+    "confidence": 0.8585440218448639,
+    "timestamp": "2025-08-31T13:40:41.822928"
   }
 ]

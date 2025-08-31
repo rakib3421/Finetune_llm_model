@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EADE Business School - Enhanced AI Assistant</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>EADE Business School - Excellence in Business Education</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --secondary-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            --chat-gradient: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            --primary-color: #24376f;
+            --secondary-color: #eeb744;
+            --primary-gradient: linear-gradient(135deg, #24376f 0%, #1e2d5f 100%);
+            --secondary-gradient: linear-gradient(135deg, #eeb744 0%, #f4c551 100%);
+            --chat-gradient: linear-gradient(135deg, #24376f 0%, #2a4080 100%);
             --success-gradient: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
             --danger-gradient: linear-gradient(135deg, #fd746c 0%, #ff9068 100%);
             --dark-bg: #1a1a2e;
@@ -18,10 +20,10 @@
             --text-primary: #2d3748;
             --text-secondary: #718096;
             --border-color: #e2e8f0;
-            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-sm: 0 1px 3px 0 rgba(36, 55, 111, 0.1), 0 1px 2px 0 rgba(36, 55, 111, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(36, 55, 111, 0.1), 0 2px 4px -1px rgba(36, 55, 111, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(36, 55, 111, 0.1), 0 4px 6px -2px rgba(36, 55, 111, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(36, 55, 111, 0.1), 0 10px 10px -5px rgba(36, 55, 111, 0.04);
         }
 
         * {
@@ -31,15 +33,11 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: var(--primary-gradient);
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #24376f 0%, #1e2d5f 25%, #2a4080 75%, #24376f 100%);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
             position: relative;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         body::before {
@@ -50,45 +48,313 @@
             right: 0;
             bottom: 0;
             background: 
-                radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.1) 0%, transparent 70%),
-                radial-gradient(ellipse at bottom right, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+                radial-gradient(ellipse at top left, rgba(238, 183, 68, 0.1) 0%, transparent 70%),
+                radial-gradient(ellipse at bottom right, rgba(238, 183, 68, 0.1) 0%, transparent 70%),
+                radial-gradient(ellipse at center, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
             pointer-events: none;
         }
 
-        .chat-container {
-            background: var(--card-bg);
-            border-radius: 24px;
-            box-shadow: var(--shadow-xl);
+        .main-container {
             width: 100%;
-            max-width: 900px;
-            height: 85vh;
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Landing Page Section */
+        .landing-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 40px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+            min-height: 100vh;
+        }
+
+        .eade-logo {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-xl);
+            background: white;
+            padding: 20px;
+            animation: logoFloat 3s ease-in-out infinite;
+            object-fit: contain;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 600px;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #eeb744 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            font-weight: 400;
+            opacity: 0.8;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .hero-highlights {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .highlight-item:hover {
+            transform: translateY(-2px);
+            color: var(--secondary-color);
+        }
+
+        .highlight-item i {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            padding: 16px 32px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-primary {
+            background: var(--secondary-gradient);
+            color: var(--primary-color);
+        }
+
+        .cta-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(238, 183, 68, 0.3);
+        }
+
+        .cta-tertiary {
+            background: rgba(238, 183, 68, 0.2);
+            color: white;
+            border: 2px solid rgba(238, 183, 68, 0.5);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(238, 183, 68, 0.4);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .feature-description {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* Chat Section - Floating Design */
+        .chat-section {
+            position: fixed;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            width: 420px;
+            height: 650px;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(36, 55, 111, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+
+        .chat-section.minimized {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            cursor: pointer;
+            background: var(--secondary-gradient);
+            box-shadow: 0 10px 30px rgba(36, 55, 111, 0.4);
+        }
+
+        .chat-section.minimized .chat-container {
+            display: none;
+        }
+
+        .chat-section.minimized .chat-minimize-btn {
+            display: none;
+        }
+
+        .chat-section.minimized::before {
+            content: '💬';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 32px;
+            animation: chatPulse 2s infinite;
+        }
+
+        @keyframes chatPulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.1); }
+        }
+
+        .chat-minimize-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 35px;
+            height: 35px;
+            background: rgba(36, 55, 111, 0.1);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 16px;
+            z-index: 1001;
+            transition: all 0.3s ease;
+        }
+
+        .chat-minimize-btn:hover {
+            background: rgba(36, 55, 111, 0.2);
+            transform: scale(1.1);
+        }
+
+        .chat-container {
+            background: transparent;
+            border-radius: 0;
+            box-shadow: none;
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             overflow: hidden;
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: none;
+            border: none;
             position: relative;
-            animation: slideIn 0.6s ease-out;
+            animation: slideInRight 0.6s ease-out;
         }
 
-        @keyframes slideIn {
+        @keyframes slideInRight {
             from {
                 opacity: 0;
-                transform: translateY(30px) scale(0.95);
+                transform: translateX(100px);
             }
             to {
                 opacity: 1;
-                transform: translateY(0) scale(1);
+                transform: translateX(0);
             }
         }
 
         .chat-header {
             background: var(--chat-gradient);
             color: white;
-            padding: 30px;
+            padding: 25px 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
+            flex-shrink: 0;
         }
 
         .chat-header::before {
@@ -99,8 +365,8 @@
             right: 0;
             bottom: 0;
             background: 
-                radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+                radial-gradient(circle at 20% 80%, rgba(238, 183, 68, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(238, 183, 68, 0.2) 0%, transparent 50%);
             pointer-events: none;
         }
 
@@ -110,17 +376,19 @@
         }
 
         .chat-header h1 {
-            font-size: 28px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
             font-weight: 700;
             margin-bottom: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .chat-header h1 i {
-            font-size: 32px;
+            font-size: 22px;
+            color: var(--secondary-color);
             animation: pulse 2s infinite;
         }
 
@@ -130,29 +398,33 @@
         }
 
         .chat-header p {
-            font-size: 16px;
+            font-size: 14px;
             opacity: 0.95;
             font-weight: 400;
-            max-width: 500px;
+            max-width: 400px;
             margin: 0 auto;
             line-height: 1.5;
         }
 
         .online-status {
             position: absolute;
-            top: 20px;
-            right: 30px;
+            top: 15px;
+            right: 20px;
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 14px;
+            font-size: 12px;
             opacity: 0.9;
+            background: rgba(238, 183, 68, 0.2);
+            padding: 6px 12px;
+            border-radius: 15px;
+            border: 1px solid rgba(238, 183, 68, 0.3);
         }
 
         .online-dot {
-            width: 10px;
-            height: 10px;
-            background: #4ade80;
+            width: 8px;
+            height: 8px;
+            background: var(--secondary-color);
             border-radius: 50%;
             animation: blink 2s infinite;
         }
@@ -164,7 +436,7 @@
 
         .chat-messages {
             flex: 1;
-            padding: 30px;
+            padding: 20px;
             overflow-y: auto;
             background: linear-gradient(to bottom, #f8fafc 0%, #f1f5f9 100%);
             position: relative;
@@ -295,10 +567,11 @@
         }
 
         .chat-input-container {
-            padding: 30px;
+            padding: 20px;
             background: white;
             border-top: 1px solid var(--border-color);
             position: relative;
+            flex-shrink: 0;
         }
 
         .chat-input-container::before {
@@ -340,9 +613,9 @@
         }
 
         .chat-input:focus {
-            border-color: #6a11cb;
+            border-color: var(--primary-color);
             background: white;
-            box-shadow: 0 0 0 4px rgba(106, 17, 203, 0.1);
+            box-shadow: 0 0 0 4px rgba(36, 55, 111, 0.1);
             transform: translateY(-1px);
         }
 
@@ -503,7 +776,7 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: var(--chat-gradient);
+            background: var(--primary-color);
             animation: typing 1.4s infinite ease-in-out;
         }
 
@@ -523,68 +796,68 @@
 
         .welcome-message {
             text-align: center;
-            padding: 60px 40px;
+            padding: 30px 20px;
             color: var(--text-secondary);
             background: white;
-            border-radius: 20px;
-            margin: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--border-color);
         }
 
         .welcome-message h2 {
             color: var(--text-primary);
-            margin-bottom: 16px;
-            font-size: 24px;
+            margin-bottom: 15px;
+            font-size: 18px;
             font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .welcome-message p {
-            font-size: 16px;
+            font-size: 14px;
             line-height: 1.6;
-            max-width: 500px;
-            margin: 0 auto;
+            margin-bottom: 20px;
         }
 
         .welcome-features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 15px;
         }
 
-        .feature-card {
-            padding: 20px;
+        .welcome-features .feature-card {
+            padding: 12px;
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            border-radius: 16px;
+            border-radius: 10px;
             text-align: center;
             transition: transform 0.2s ease;
         }
 
-        .feature-card:hover {
+        .welcome-features .feature-card:hover {
             transform: translateY(-2px);
         }
 
-        .feature-card i {
-            font-size: 24px;
-            color: #6a11cb;
-            margin-bottom: 8px;
+        .welcome-features .feature-card i {
+            font-size: 16px;
+            color: var(--primary-color);
+            margin-bottom: 6px;
         }
 
-        .feature-card h4 {
-            font-size: 14px;
+        .welcome-features .feature-card h4 {
+            font-size: 12px;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 4px;
         }
 
-        .feature-card p {
-            font-size: 12px;
+        .welcome-features .feature-card p {
+            font-size: 10px;
             color: var(--text-secondary);
+            margin: 0;
         }
 
         .error-message {
@@ -619,107 +892,212 @@
         }
 
         /* Enhanced responsive design */
-        @media (max-width: 768px) {
-            body {
-                padding: 15px;
+        @media (max-width: 1200px) {
+            .main-container {
+                flex-direction: column;
+                padding: 0;
             }
 
-            .chat-container {
-                height: 90vh;
-                border-radius: 20px;
-                max-width: 100%;
+            .landing-section {
+                padding: 40px 20px;
+                min-height: auto;
+            }
+
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .chat-section {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90%;
+                max-width: 400px;
+                min-width: 300px;
+                height: 80vh;
+                z-index: 1000;
+                margin: 0;
+                transition: all 0.3s ease;
+            }
+
+            .chat-section.hidden {
+                display: none;
+            }
+
+            .chat-toggle-btn {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .landing-section {
+                padding: 30px 15px;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .hero-highlights {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+                margin-bottom: 30px;
+            }
+
+            .highlight-item {
+                justify-content: center;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .chat-section {
+                width: 95%;
+                height: 85vh;
             }
 
             .chat-header {
-                padding: 24px 20px;
+                padding: 20px 15px;
             }
 
             .chat-header h1 {
-                font-size: 22px;
-            }
-
-            .chat-header p {
-                font-size: 14px;
+                font-size: 18px;
             }
 
             .online-status {
-                top: 15px;
-                right: 20px;
-                font-size: 12px;
+                top: 10px;
+                right: 15px;
+                font-size: 11px;
             }
 
             .chat-messages {
-                padding: 20px 16px;
+                padding: 15px 12px;
+            }
+
+            .welcome-message {
+                padding: 20px 15px;
+                margin: 10px 0;
+            }
+
+            .welcome-message h2 {
+                font-size: 16px;
+            }
+
+            .welcome-message p {
+                font-size: 13px;
+            }
+
+            .welcome-features {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+                margin-top: 12px;
+            }
+
+            .welcome-features .feature-card {
+                padding: 10px 8px;
+            }
+
+            .welcome-features .feature-card h4 {
+                font-size: 11px;
+            }
+
+            .welcome-features .feature-card p {
+                font-size: 9px;
             }
 
             .message-content {
                 max-width: 85%;
-                padding: 16px 20px;
+                padding: 14px 18px;
                 font-size: 14px;
             }
 
             .message-avatar {
-                width: 40px;
-                height: 40px;
-                font-size: 14px;
-                margin: 0 8px;
+                width: 36px;
+                height: 36px;
+                font-size: 13px;
+                margin: 0 6px;
             }
 
             .chat-input-container {
-                padding: 20px 16px;
+                padding: 15px 12px;
             }
 
             .chat-input {
-                font-size: 16px;
-                padding: 16px 20px;
-                padding-right: 100px;
+                font-size: 14px;
+                padding: 14px 18px;
+                padding-right: 90px;
             }
 
             .send-button {
-                width: 50px;
-                height: 50px;
-                font-size: 18px;
-            }
-
-            .welcome-message {
-                padding: 40px 20px;
-                margin: 15px;
-            }
-
-            .welcome-message h2 {
-                font-size: 20px;
-            }
-
-            .welcome-features {
-                grid-template-columns: 1fr;
-                gap: 15px;
-                margin-top: 25px;
-            }
-
-            .feature-card {
-                padding: 16px;
+                width: 44px;
+                height: 44px;
+                font-size: 16px;
             }
         }
 
         @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-highlights {
+                padding: 15px;
+                gap: 12px;
+            }
+
+            .highlight-item {
+                font-size: 0.9rem;
+            }
+
+            .eade-logo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .cta-button {
+                padding: 12px 24px;
+                font-size: 1rem;
+            }
+
             .chat-header h1 {
-                font-size: 20px;
+                font-size: 18px;
                 flex-direction: column;
-                gap: 8px;
+                gap: 6px;
             }
 
             .chat-input {
-                padding-right: 80px;
+                padding-right: 70px;
             }
 
             .send-button {
-                width: 46px;
-                height: 46px;
+                width: 40px;
+                height: 40px;
             }
 
             .message-content {
                 max-width: 90%;
-                padding: 14px 18px;
+                padding: 12px 16px;
             }
         }
 
@@ -782,7 +1160,7 @@
             width: 40px;
             height: 40px;
             border: 4px solid #f3f4f6;
-            border-top: 4px solid #6a11cb;
+            border-top: 4px solid var(--primary-color);
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
@@ -791,88 +1169,1241 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        /* Additional Styles for Landing */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            opacity: 0.7;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        .chat-toggle-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--secondary-gradient);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: var(--shadow-xl);
+            z-index: 999;
+            transition: all 0.3s ease;
+            display: none;
+        }
+
+        .chat-toggle-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .chat-toggle-btn.active {
+            background: var(--primary-gradient);
+            color: white;
+        }
+
+        /* Chat overlay for mobile */
+        .chat-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 998;
+            display: none;
+            backdrop-filter: blur(5px);
+        }
+
+        .chat-overlay.active {
+            display: block;
+        }
+
+        /* Conversation starters styling */
+        .conversation-starters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+
+        .conversation-starters button {
+            background: rgba(36, 55, 111, 0.1);
+            border: 1px solid rgba(36, 55, 111, 0.2);
+            color: var(--primary-color);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        .conversation-starters button:hover {
+            background: rgba(36, 55, 111, 0.2);
+            transform: translateY(-1px);
+        }
+
+        /* New Sections Styling */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #eeb744 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Programs Section */
+        .programs-section {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .program-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(238, 183, 68, 0.1) 0%, rgba(36, 55, 111, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .program-card:hover::before {
+            opacity: 1;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(238, 183, 68, 0.4);
+            box-shadow: 0 20px 40px rgba(36, 55, 111, 0.2);
+        }
+
+        .program-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .program-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .program-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .program-description {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .program-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .feature-tag {
+            background: rgba(238, 183, 68, 0.2);
+            color: var(--secondary-color);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(238, 183, 68, 0.3);
+        }
+
+        .program-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--secondary-gradient);
+            color: var(--primary-color);
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .program-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Statistics Section */
+        .stats-section {
+            background: rgba(238, 183, 68, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .stat-label {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* Campus Section */
+        .campus-section {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .campus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .campus-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .campus-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(36, 55, 111, 0.2);
+        }
+
+        .campus-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .campus-placeholder {
+            font-size: 4rem;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .campus-content {
+            padding: 30px;
+        }
+
+        .campus-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .campus-location {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .campus-description {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .campus-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .campus-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        .campus-feature i {
+            color: var(--secondary-color);
+            width: 16px;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background: rgba(238, 183, 68, 0.05);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(238, 183, 68, 0.4);
+        }
+
+        .quote-icon {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .testimonial-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin: 2px 0;
+        }
+
+        /* Why Choose Section */
+        .why-choose-section {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .why-choose-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-choose-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(238, 183, 68, 0.1) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .why-choose-card:hover::before {
+            opacity: 1;
+        }
+
+        .why-choose-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(238, 183, 68, 0.4);
+        }
+
+        .why-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-choose-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-choose-card p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: rgba(238, 183, 68, 0.1);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .contact-info h3,
+        .application-steps h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(5px);
+        }
+
+        .contact-item i {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-top: 2px;
+            width: 20px;
+        }
+
+        .contact-item h4 {
+            font-weight: 600;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .contact-item p {
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0;
+        }
+
+        .steps-list {
+            margin-bottom: 30px;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .step-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(5px);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--secondary-gradient);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            font-weight: 600;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .step-content p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .cta-final {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* Enhanced Responsive Design */
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .programs-grid,
+            .campus-grid,
+            .testimonials-grid,
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .program-card,
+            .campus-card,
+            .testimonial-card,
+            .why-choose-card {
+                padding: 25px 20px;
+            }
+
+            .campus-features {
+                grid-template-columns: 1fr;
+            }
+
+            .step-item {
+                padding: 15px;
+            }
+
+            .cta-final {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .program-features {
+                justify-content: center;
+            }
+
+            .testimonial-author {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="chat-container">
-        <div class="chat-header">
-            <div class="online-status">
-                <div class="online-dot"></div>
-                <span>Learning</span>
+    <div class="main-container">
+        <!-- Landing Page Section -->
+        <div class="landing-section">
+            <!-- EADE Logo -->
+            <img src="{{ url_for('static', filename='EADE LOGO.png') }}" alt="EADE Business School Logo" class="eade-logo">
+            
+            <div class="hero-content">
+                <h1 class="hero-title">EADE Business School</h1>
+                <p class="hero-subtitle">Excellence in Business Education Since 1996</p>
+                <p class="hero-description">
+                    Transform your career with Spain's leading business school. Join over 10,000 successful alumni 
+                    worldwide who chose EADE for internationally accredited MBA, Master's, and specialized business 
+                    programs. Located in Madrid and Málaga with flexible online options.
+                </p>
+                
+                <div class="hero-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-star"></i>
+                        <span>Internationally Accredited</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>98% Employment Rate</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-globe-europe"></i>
+                        <span>50+ Corporate Partners</span>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#programs" class="cta-button cta-primary">
+                        <i class="fas fa-graduation-cap"></i>
+                        Explore Programs
+                    </a>
+                    <a href="#contact" class="cta-button cta-secondary">
+                        <i class="fas fa-calendar-alt"></i>
+                        Book Consultation
+                    </a>
+                    <a href="#" class="cta-button cta-tertiary">
+                        <i class="fas fa-play-circle"></i>
+                        Virtual Tour
+                    </a>
+                </div>
             </div>
-            <div class="chat-header-content">
-                <h1>
-                    <i class="fas fa-graduation-cap"></i>
-                    EADE Business School Enhanced AI Assistant
-                </h1>
-                <p>Intelligent AI with continuous learning & advanced NLP capabilities</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="feature-title">Accredited Excellence</h3>
+                    <p class="feature-description">
+                        Internationally recognized programs with prestigious accreditations
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="feature-title">Global Network</h3>
+                    <p class="feature-description">
+                        Connect with industry leaders and alumni worldwide
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="feature-title">Career Success</h3>
+                    <p class="feature-description">
+                        98% employment rate within 6 months of graduation
+                    </p>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
             </div>
         </div>
-        
-        <div class="chat-messages" id="chatMessages">
-            <div class="welcome-message">
-                <h2>
-                    <i class="fas fa-robot"></i>
-                    Welcome to EADE Business School!
-                </h2>
-                <p>Hello! I'm your virtual receptionist for EADE Business School. I'm here to help you with information about our programs, admissions process, campus locations, and answer any questions you might have. Feel free to start with a simple "hello" or ask me anything about our school!</p>
+
+        <!-- Academic Programs Section -->
+        <section id="programs" class="programs-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Academic Programs</h2>
+                    <p class="section-subtitle">Discover world-class business education programs designed for tomorrow's leaders</p>
+                </div>
                 
-                <div class="welcome-features">
-                    <div class="feature-card">
-                        <i class="fas fa-book-open"></i>
-                        <h4>Programs</h4>
-                        <p>Learn about our courses</p>
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="program-content">
+                            <h3>MBA Programs</h3>
+                            <p class="program-description">Executive MBA, Full-time MBA, and Part-time MBA options with specializations in Digital Transformation, Finance, and International Business.</p>
+                            <div class="program-features">
+                                <span class="feature-tag">18 months</span>
+                                <span class="feature-tag">English/Spanish</span>
+                                <span class="feature-tag">Online/On-campus</span>
+                            </div>
+                            <a href="#contact" class="program-btn">Learn More</a>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <i class="fas fa-user-graduate"></i>
-                        <h4>Admissions</h4>
-                        <p>Application process</p>
+                    
+                    <div class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="program-content">
+                            <h3>Master's Degrees</h3>
+                            <p class="program-description">Specialized Master's in Marketing Digital, Data Analytics, Human Resources, and International Trade.</p>
+                            <div class="program-features">
+                                <span class="feature-tag">12 months</span>
+                                <span class="feature-tag">Bilingual</span>
+                                <span class="feature-tag">Industry Projects</span>
+                            </div>
+                            <a href="#contact" class="program-btn">Learn More</a>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h4>Campus</h4>
-                        <p>Locations & facilities</p>
+                    
+                    <div class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="program-content">
+                            <h3>Digital Programs</h3>
+                            <p class="program-description">Online degrees and certifications in Digital Marketing, E-commerce, and Business Analytics.</p>
+                            <div class="program-features">
+                                <span class="feature-tag">Flexible</span>
+                                <span class="feature-tag">100% Online</span>
+                                <span class="feature-tag">Industry Certified</span>
+                            </div>
+                            <a href="#contact" class="program-btn">Learn More</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="chat-input-container">
-            <form class="chat-input-form" id="chatForm">
-                <div class="input-wrapper">
-                    <textarea 
-                        class="chat-input" 
-                        id="messageInput" 
-                        placeholder="Ask me anything about EADE Business School..."
-                        rows="1"
-                        required
-                    ></textarea>
-                    <div class="input-actions">
-                        <button type="button" class="emoji-button" title="Add emoji">
-                            <i class="far fa-smile"></i>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Years of Excellence</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">Alumni Worldwide</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Employment Rate</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Corporate Partners</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Campus Information Section -->
+        <section class="campus-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Campuses</h2>
+                    <p class="section-subtitle">Modern facilities in Spain's most dynamic business centers</p>
+                </div>
+                
+                <div class="campus-grid">
+                    <div class="campus-card">
+                        <div class="campus-image">
+                            <div class="campus-placeholder">
+                                <i class="fas fa-building"></i>
+                            </div>
+                        </div>
+                        <div class="campus-content">
+                            <h3>Madrid Campus</h3>
+                            <p class="campus-location"><i class="fas fa-map-marker-alt"></i> Heart of Spain's Capital</p>
+                            <p class="campus-description">Located in Madrid's business district, offering state-of-the-art facilities, modern classrooms, and networking opportunities with leading Spanish corporations.</p>
+                            <div class="campus-features">
+                                <div class="campus-feature">
+                                    <i class="fas fa-wifi"></i>
+                                    <span>High-Speed Internet</span>
+                                </div>
+                                <div class="campus-feature">
+                                    <i class="fas fa-book"></i>
+                                    <span>Digital Library</span>
+                                </div>
+                                <div class="campus-feature">
+                                    <i class="fas fa-users"></i>
+                                    <span>Study Groups</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="campus-card">
+                        <div class="campus-image">
+                            <div class="campus-placeholder">
+                                <i class="fas fa-umbrella-beach"></i>
+                            </div>
+                        </div>
+                        <div class="campus-content">
+                            <h3>Málaga Campus</h3>
+                            <p class="campus-location"><i class="fas fa-map-marker-alt"></i> Costa del Sol</p>
+                            <p class="campus-description">Beautiful Mediterranean campus combining academic excellence with quality of life, perfect for international students seeking a unique study experience.</p>
+                            <div class="campus-features">
+                                <div class="campus-feature">
+                                    <i class="fas fa-sun"></i>
+                                    <span>Year-round Sunshine</span>
+                                </div>
+                                <div class="campus-feature">
+                                    <i class="fas fa-globe"></i>
+                                    <span>International Hub</span>
+                                </div>
+                                <div class="campus-feature">
+                                    <i class="fas fa-ship"></i>
+                                    <span>Near Port & Airport</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What Our Students Say</h2>
+                    <p class="section-subtitle">Real experiences from our EADE community</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">"EADE's MBA program transformed my career. The blend of theoretical knowledge and practical application, combined with excellent networking opportunities, helped me secure a leadership position in a multinational company."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>María González</h4>
+                                <p>MBA Graduate 2023</p>
+                                <p>Senior Manager, Banco Santander</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">"The international perspective and multicultural environment at EADE prepared me for global business challenges. The faculty's industry experience made all the difference."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>James Anderson</h4>
+                                <p>Master's in International Business</p>
+                                <p>Business Development, Tesla Europe</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">"EADE's digital transformation focus and hands-on approach to learning gave me the skills I needed to launch my own tech startup. The entrepreneurship support was invaluable."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-astronaut"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Sofia Ruiz</h4>
+                                <p>Digital Marketing Master's</p>
+                                <p>Founder, InnovaTech Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose EADE Section -->
+        <section class="why-choose-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Choose EADE?</h2>
+                    <p class="section-subtitle">Discover what makes us Spain's leading business school</p>
+                </div>
+                
+                <div class="why-choose-grid">
+                    <div class="why-choose-card">
+                        <div class="why-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>International Accreditation</h3>
+                        <p>Recognized by AACSB, EFMD, and other prestigious international bodies, ensuring global recognition of your degree.</p>
+                    </div>
+                    
+                    <div class="why-choose-card">
+                        <div class="why-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Industry Partnerships</h3>
+                        <p>Strong connections with leading companies like Accenture, Deloitte, BBVA, and Telefónica for internships and job placements.</p>
+                    </div>
+                    
+                    <div class="why-choose-card">
+                        <div class="why-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Innovation Focus</h3>
+                        <p>Cutting-edge curriculum incorporating AI, blockchain, digital transformation, and sustainable business practices.</p>
+                    </div>
+                    
+                    <div class="why-choose-card">
+                        <div class="why-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>Expert Faculty</h3>
+                        <p>Learn from industry leaders and renowned academics with real-world business experience and research expertise.</p>
+                    </div>
+                    
+                    <div class="why-choose-card">
+                        <div class="why-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Career Acceleration</h3>
+                        <p>Dedicated career services, mentorship programs, and alumni network to boost your professional growth.</p>
+                    </div>
+                    
+                    <div class="why-choose-card">
+                        <div class="why-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h3>Global Perspective</h3>
+                        <p>International exchange programs, global case studies, and multicultural learning environment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact and Application Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Ready to Start Your Journey?</h2>
+                    <p class="section-subtitle">Take the next step towards your business education goals</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+34 952 20 42 47</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>admissions@eade.es</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>C/ Vendeja, 23, 29001 Málaga, Spain</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Office Hours</h4>
+                                <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="application-steps">
+                        <h3>Application Process</h3>
+                        <div class="steps-list">
+                            <div class="step-item">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Submit Application</h4>
+                                    <p>Complete our online application form with your academic and professional background.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Documentation Review</h4>
+                                    <p>Our admissions team reviews your transcripts, CV, and recommendation letters.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Interview</h4>
+                                    <p>Personal interview to assess your motivation and fit with our programs.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h4>Enrollment</h4>
+                                    <p>Receive your acceptance letter and complete enrollment process.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="cta-final">
+                            <a href="#" class="cta-button cta-primary">
+                                <i class="fas fa-file-alt"></i>
+                                Apply Now
+                            </a>
+                            <a href="#" class="cta-button cta-secondary">
+                                <i class="fas fa-download"></i>
+                                Download Brochure
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chat Section -->
+        <div class="chat-section" id="chatSection">
+            <button class="chat-minimize-btn" id="chatMinimizeBtn">
+                <i class="fas fa-minus"></i>
+            </button>
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-header-content">
+                        <h1>
+                            <i class="fas fa-robot"></i>
+                            Virtual Receptionist
+                        </h1>
+                        <p>Ask me anything about EADE Business School!</p>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                    <div class="welcome-message">
+                        <h2>
+                            <i class="fas fa-robot"></i>
+                            ¡Hola! Welcome to EADE Business School!
+                        </h2>
+                        <p>I'm your virtual receptionist for EADE Business School. I can help you with information about our programs, admissions process, campus locations in Spain, scholarship opportunities, and answer any questions about studying with us. ¿En qué puedo ayudarte?</p>
+                        
+                        <div class="welcome-features">
+                            <div class="feature-card">
+                                <i class="fas fa-book-open"></i>
+                                <h4>Academic Programs</h4>
+                                <p>MBA, Master's & Bachelor's</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-user-graduate"></i>
+                                <h4>Admissions</h4>
+                                <p>Application & Requirements</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h4>Campus Locations</h4>
+                                <p>Madrid, Málaga & Online</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-euro-sign"></i>
+                                <h4>Scholarships</h4>
+                                <p>Financial Aid Options</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <form class="chat-input-form" id="chatForm">
+                        <div class="input-wrapper">
+                            <textarea 
+                                class="chat-input" 
+                                id="messageInput" 
+                                placeholder="Ask me about EADE programs, admissions, or campus life..."
+                                rows="1"
+                                required
+                            ></textarea>
+                            <div class="input-actions">
+                                <button type="button" class="emoji-button" title="Add emoji">
+                                    <i class="far fa-smile"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="submit" class="send-button" id="sendButton" title="Send message">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div class="chat-controls">
+                        <div class="status-indicator" id="statusIndicator">
+                            <i class="fas fa-circle"></i>
+                            Ready to help you
+                        </div>
+                        <button type="button" class="reset-button" id="resetButton">
+                            <i class="fas fa-redo-alt"></i>
+                            New Conversation
                         </button>
                     </div>
                 </div>
-                <button type="submit" class="send-button" id="sendButton" title="Send message">
-                    <i class="fas fa-paper-plane"></i>
-                </button>
-            </form>
-            <div class="chat-controls">
-                <div class="status-indicator" id="statusIndicator">
-                    <i class="fas fa-circle"></i>
-                    Ready to chat
+                
+                <div class="loading-overlay" id="loadingOverlay">
+                    <div class="loading-spinner"></div>
                 </div>
-                <button type="button" class="reset-button" id="resetButton">
-                    <i class="fas fa-redo-alt"></i>
-                    New Conversation
-                </button>
             </div>
         </div>
-        
-        <div class="loading-overlay" id="loadingOverlay">
-            <div class="loading-spinner"></div>
-        </div>
     </div>
+
+    <!-- Chat Overlay for Mobile -->
+    <div class="chat-overlay" id="chatOverlay"></div>
+
+    <!-- Floating Chat Toggle for Mobile -->
+    <button class="chat-toggle-btn" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </button>
 
     <script>
         const chatMessages = document.getElementById('chatMessages');
@@ -882,6 +2413,32 @@
         const resetButton = document.getElementById('resetButton');
         const statusIndicator = document.getElementById('statusIndicator');
         const loadingOverlay = document.getElementById('loadingOverlay');
+        const chatSection = document.getElementById('chatSection');
+        const chatMinimizeBtn = document.getElementById('chatMinimizeBtn');
+
+        // Chat minimize/maximize functionality
+        let chatMinimized = false;
+
+        function toggleChat() {
+            chatMinimized = !chatMinimized;
+            if (chatMinimized) {
+                chatSection.classList.add('minimized');
+                chatMinimizeBtn.innerHTML = '<i class="fas fa-expand"></i>';
+            } else {
+                chatSection.classList.remove('minimized');
+                chatMinimizeBtn.innerHTML = '<i class="fas fa-minus"></i>';
+                messageInput.focus();
+            }
+        }
+
+        chatMinimizeBtn.addEventListener('click', toggleChat);
+        
+        // Click to expand when minimized
+        chatSection.addEventListener('click', function(e) {
+            if (chatMinimized && !e.target.closest('.chat-minimize-btn')) {
+                toggleChat();
+            }
+        });
 
         // Auto-focus on input
         messageInput.focus();
@@ -920,7 +2477,7 @@
                     messageInput.focus();
                     
                     setTimeout(() => {
-                        statusIndicator.innerHTML = '<i class="fas fa-circle"></i> Ready to chat';
+                        statusIndicator.innerHTML = '<i class="fas fa-circle"></i> Ready to help you';
                     }, 2000);
                     
                 } catch (error) {
@@ -972,16 +2529,16 @@
                 if (data.status === 'success') {
                     // Add bot response to chat
                     addMessage(data.response, 'bot');
-                    statusIndicator.innerHTML = '<i class="fas fa-circle"></i> Ready to chat';
+                    statusIndicator.innerHTML = '<i class="fas fa-circle"></i> Ready to help you';
                 } else {
                     // Show error message
-                    addMessage('I apologize, but I encountered an error while processing your request. Please try again or contact EADE Business School directly for assistance.', 'bot');
+                    addMessage('Lo siento, but I encountered an error while processing your request. Please try again or contact EADE Business School directly for assistance at eade.es', 'bot');
                     statusIndicator.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error occurred - Ready to retry';
                     console.error('Chat error:', data.error);
                 }
             } catch (error) {
                 hideTypingIndicator();
-                addMessage('I\'m having trouble connecting right now. Please check your internet connection and try again, or contact EADE Business School directly for immediate assistance.', 'bot');
+                addMessage('I\'m having trouble connecting right now. Please check your internet connection and try again, or visit eade.es for immediate assistance.', 'bot');
                 statusIndicator.innerHTML = '<i class="fas fa-wifi"></i> Connection error - Ready to retry';
                 console.error('Network error:', error);
             } finally {
@@ -1190,6 +2747,215 @@
         // Load stats periodically
         loadLearningStats();
         setInterval(loadLearningStats, 60000); // Every minute
+
+        // Mobile Chat Toggle Functionality
+        const chatToggle = document.getElementById('chatToggle');
+        const chatOverlay = document.getElementById('chatOverlay');
+        let chatVisible = true;
+
+        function updateChatVisibility() {
+            if (window.innerWidth <= 1200) {
+                if (chatVisible) {
+                    chatToggle.style.display = 'none';
+                    chatSection.style.display = 'flex';
+                    chatSection.classList.remove('hidden');
+                    chatOverlay.classList.add('active');
+                    chatToggle.classList.add('active');
+                } else {
+                    chatToggle.style.display = 'flex';
+                    chatSection.style.display = 'none';
+                    chatSection.classList.add('hidden');
+                    chatOverlay.classList.remove('active');
+                    chatToggle.classList.remove('active');
+                }
+            } else {
+                chatToggle.style.display = 'none';
+                chatSection.style.display = 'flex';
+                chatSection.classList.remove('hidden');
+                chatOverlay.classList.remove('active');
+                chatVisible = true;
+            }
+        }
+
+        chatToggle.addEventListener('click', () => {
+            chatVisible = !chatVisible;
+            updateChatVisibility();
+            if (chatVisible) {
+                setTimeout(() => messageInput.focus(), 300);
+            }
+        });
+
+        // Close chat when clicking overlay
+        chatOverlay.addEventListener('click', () => {
+            chatVisible = false;
+            updateChatVisibility();
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', updateChatVisibility);
+        
+        // Initial setup
+        setTimeout(() => {
+            updateChatVisibility();
+            // Hide chat on mobile initially
+            if (window.innerWidth <= 1200) {
+                chatVisible = false;
+                updateChatVisibility();
+            }
+        }, 100);
+
+        // Enhanced welcome messages for EADE
+        const eadeWelcomeMessages = [
+            "¡Hola! How can I help you learn about EADE Business School today? 🎓",
+            "Welcome to EADE! What would you like to know about our MBA programs? 📚",
+            "Bienvenido! I'm here to answer questions about admissions and scholarships. 💡",
+            "Hello! Ask me about our campuses in Madrid and Málaga! 🏫",
+            "¡Encantado! Ready to help you discover EADE's business programs. ✨"
+        ];
+
+        // Smooth scrolling for landing page elements
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add floating particles effect for enhanced visual appeal
+        function createFloatingParticle() {
+            const particle = document.createElement('div');
+            particle.style.cssText = `
+                position: fixed;
+                width: 4px;
+                height: 4px;
+                background: rgba(238, 183, 68, 0.6);
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 0;
+                left: ${Math.random() * 100}vw;
+                animation: floatUp 8s linear infinite;
+            `;
+            
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 8000);
+        }
+
+        // Add floating particles periodically
+        setInterval(createFloatingParticle, 3000);
+
+        // Enhanced keyboard shortcuts and accessibility
+        document.addEventListener('keydown', (e) => {
+            // Alt + C to focus chat
+            if (e.altKey && e.key === 'c') {
+                e.preventDefault();
+                if (window.innerWidth <= 1200 && !chatVisible) {
+                    chatVisible = true;
+                    updateChatVisibility();
+                }
+                setTimeout(() => messageInput.focus(), 100);
+            }
+            
+            // Escape to close mobile chat
+            if (e.key === 'Escape' && window.innerWidth <= 1200 && chatVisible) {
+                chatVisible = false;
+                updateChatVisibility();
+            }
+        });
+
+        // Add CSS for floating particles
+        const particleStyle = document.createElement('style');
+        particleStyle.textContent = `
+            @keyframes floatUp {
+                0% {
+                    transform: translateY(100vh) rotate(0deg);
+                    opacity: 0;
+                }
+                10% {
+                    opacity: 1;
+                }
+                90% {
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-10px) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(particleStyle);
+
+        // EADE-specific conversation starters
+        const conversationStarters = [
+            "Tell me about EADE's MBA program",
+            "What are the admission requirements?", 
+            "Campus locations and facilities",
+            "Scholarship opportunities",
+            "Online learning options",
+            "Career services and job placement"
+        ];
+
+        // Add conversation starter buttons (optional feature)
+        function addConversationStarters() {
+            const startersContainer = document.createElement('div');
+            startersContainer.className = 'conversation-starters';
+            startersContainer.style.cssText = `
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 20px;
+                justify-content: center;
+            `;
+
+            conversationStarters.forEach(starter => {
+                const button = document.createElement('button');
+                button.textContent = starter;
+                button.style.cssText = `
+                    background: rgba(36, 55, 111, 0.1);
+                    border: 1px solid rgba(36, 55, 111, 0.2);
+                    color: var(--primary-color);
+                    padding: 8px 16px;
+                    border-radius: 20px;
+                    font-size: 12px;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                `;
+                
+                button.addEventListener('click', () => {
+                    messageInput.value = starter;
+                    chatForm.dispatchEvent(new Event('submit'));
+                });
+                
+                button.addEventListener('mouseenter', () => {
+                    button.style.background = 'rgba(36, 55, 111, 0.2)';
+                    button.style.transform = 'translateY(-1px)';
+                });
+                
+                button.addEventListener('mouseleave', () => {
+                    button.style.background = 'rgba(36, 55, 111, 0.1)';
+                    button.style.transform = 'translateY(0)';
+                });
+                
+                startersContainer.appendChild(button);
+            });
+
+            // Add to welcome message if it exists
+            const welcomeMessage = document.querySelector('.welcome-message');
+            if (welcomeMessage && !welcomeMessage.querySelector('.conversation-starters')) {
+                welcomeMessage.appendChild(startersContainer);
+            }
+        }
+
+        // Initialize conversation starters
+        addConversationStarters();
     </script>
 </body>
 </html>
