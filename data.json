@@ -61,7 +61,7 @@
   },
   {
     "prompt": "What is the full name of EADE Business School?",
-    "response": "The full name of EADE Business School is Escuela de Alta DirecciÃ³n Empresarial."
+    "response": "The full name of EADE Business School is Escuela de Alta DirecciÃƒÂ³n Empresarial."
   },
   {
     "prompt": "What is EADE Business School?",
@@ -113,7 +113,7 @@
   },
   {
     "prompt": "What combined degree programs are available at EADE Business School?",
-    "response": "EADE Business School offers combined degree programs (Doble TitulaciÃ³n) including integrated Bachelor and Master programs for those who did not complete higher education, such as BBA + MBA, BBA + Master in Marketing, BBA + Master in Human Resources, and BBA + MSc in Supply Chain. These are intensive, use 'Learning by Doing,' and validate prior studies or experience."
+    "response": "EADE Business School offers combined degree programs (Doble TitulaciÃƒÂ³n) including integrated Bachelor and Master programs for those who did not complete higher education, such as BBA + MBA, BBA + Master in Marketing, BBA + Master in Human Resources, and BBA + MSc in Supply Chain. These are intensive, use 'Learning by Doing,' and validate prior studies or experience."
   },
   {
     "prompt": "What are the details of the BBA + MBA program at EADE Business School?",
@@ -197,7 +197,7 @@
   },
   {
     "prompt": "How can I contact EADE Business School?",
-    "response": "Contact EADE Business School by phone at +502 2315 9868 or +502 2269 1300, email at info@eade.gt, or visit 8va Calle 2-26, Zona 10, Ciudad de Guatemala. They are active on Facebook (@EADE.GT), Instagram (@eade.gt), Twitter (@EADEBS), LinkedIn, and YouTube. Operating hours: Mon-Fri 8:30 AMâ€“9:00 PM, Sat 8:30 AM."
+    "response": "Contact EADE Business School by phone at +502 2315 9868 or +502 2269 1300, email at info@eade.gt, or visit 8va Calle 2-26, Zona 10, Ciudad de Guatemala. They are active on Facebook (@EADE.GT), Instagram (@eade.gt), Twitter (@EADEBS), LinkedIn, and YouTube. Operating hours: Mon-Fri 8:30 AMÃ¢â‚¬â€œ9:00 PM, Sat 8:30 AM."
   },
   {
     "prompt": "What additional features does EADE Business School offer?",
@@ -224,8 +224,8 @@
     "response": "EADE Business School supports financial assistance through scholarships based on merit and need, with candidates contacting the Admissions Department for evaluation and application, making education accessible for passionate business students."
   },
   {
-    "prompt": "What is the 'Doble TitulaciÃ³n' at EADE Business School?",
-    "response": "Doble TitulaciÃ³n at EADE Business School refers to combined Bachelor and Master programs, allowing students to achieve dual degrees efficiently, especially for those validating prior higher education or experience, in an intensive format."
+    "prompt": "What is the 'Doble TitulaciÃƒÂ³n' at EADE Business School?",
+    "response": "Doble TitulaciÃƒÂ³n at EADE Business School refers to combined Bachelor and Master programs, allowing students to achieve dual degrees efficiently, especially for those validating prior higher education or experience, in an intensive format."
   },
   {
     "prompt": "How does EADE prepare students for leadership?",
@@ -245,7 +245,7 @@
   },
   {
     "prompt": "What is a success story from EADE alumni?",
-    "response": "JosÃ© Javier Castillo graduated as an MBA in International Management from EADE Barcelona and CENTRUM CatÃ³lica Graduate Business School, showcasing EADE's impact on international career growth."
+    "response": "JosÃƒÂ© Javier Castillo graduated as an MBA in International Management from EADE Barcelona and CENTRUM CatÃƒÂ³lica Graduate Business School, showcasing EADE's impact on international career growth."
   },
   {
     "prompt": "What events does EADE host?",
@@ -304,8 +304,8 @@
     "response": "An example of EADE's innovative education is the 'Learning by Doing' methodology, integrating case studies and real-world scenarios for immediate professional application."
   },
   {
-    "prompt": "What financial support does EADE provide for maestrÃ­as?",
-    "response": "EADE provides financial support for maestrÃ­as through scholarships and assistance, with candidates contacting admissions for evaluation based on merit and need."
+    "prompt": "What financial support does EADE provide for maestrÃƒÂ­as?",
+    "response": "EADE provides financial support for maestrÃƒÂ­as through scholarships and assistance, with candidates contacting admissions for evaluation based on merit and need."
   },
   {
     "prompt": "How does EADE position graduates in the market?",
@@ -325,7 +325,7 @@
   },
   {
     "prompt": "What is CLADEA's role in EADE partnerships?",
-    "response": "CLADEA (Consejo Latinoamericano de Escuelas de AdministraciÃ³n) partners with EADE for regional academic collaboration, supporting best practices in business education."
+    "response": "CLADEA (Consejo Latinoamericano de Escuelas de AdministraciÃƒÂ³n) partners with EADE for regional academic collaboration, supporting best practices in business education."
   },
   {
     "prompt": "What is HACU's role in EADE partnerships?",
@@ -361,7 +361,7 @@
   },
   {
     "prompt": "What is a recent EADE X post about?",
-    "response": "A recent EADE X post promotes studying specialties with financial support from FundaciÃ³n GÃ©nesis Empresarial, encouraging big dreams for the 2022 cycle (historical post)."
+    "response": "A recent EADE X post promotes studying specialties with financial support from FundaciÃƒÂ³n GÃƒÂ©nesis Empresarial, encouraging big dreams for the 2022 cycle (historical post)."
   },
   {
     "prompt": "What reviews highlight about EADE programs?",
@@ -369,7 +369,7 @@
   },
   {
     "prompt": "what is the full name of this school",
-    "response": "EADE Business School is an educational institution known as Escuela de Alta DirecciÃ³n Empresarial.",
+    "response": "EADE Business School is an educational institution known as Escuela de Alta DirecciÃƒÂ³n Empresarial.",
     "learned_from_frequency": 2,
     "learned_date": "2025-08-31T10:26:14.786218"
   },
@@ -384,5 +384,11 @@
     "response": "EADE's MBA program is an intensive, practical learning experience designed to develop strategic skills and leadership for career advancement. It focuses on administration, innovation, and global business, providing graduates with a competitive edge in the job market. The program is delivered in a format that enhances decision-making and positions graduates for higher responsibilities. With a strong emphasis on practical learning, EADE's MBA program is an excellent choice for professionals looking to advance their careers in the field of management. The programs offered include an MBA, which is an advanced degree that provides graduates with the skills and knowledge necessary to succeed in today's competitive business environment. The MBA program at EADE Business School is tailored to meet the needs of working professionals, offering a flexible schedule that allows for part-time Would you like details about a specific program?",
     "learned_from_frequency": 2,
     "learned_date": "2025-08-31T13:43:32.095634"
+  },
+  {
+    "prompt": "online learning options",
+    "response": "Dear user,\n\nThank you for your interest in EADE Business School's online learning options. We offer a variety of practical and flexible learning experiences designed to cater to different learning styles and preferences. Our courses are designed to provide immediate application of knowledge in professional settings through case studies, industry integrations, and 'Learning by Doing' methods.\n\nHere are some of our popular online learning options:\n\n1. Executive MBA: A comprehensive program that combines theory and practical applications to develop leadership skills and enhance career prospects.\n2. Open Learning Program: Flexible, self-paced courses that allow you to learn at your own pace and on your own schedule.\n3. Specialized Programs: Tailored programs that focus on specific areas of business, such as finance, marketing, or",
+    "learned_from_frequency": 2,
+    "learned_date": "2025-09-01T09:52:42.020990"
   }
 ]

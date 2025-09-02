@@ -18,7 +18,7 @@
   {
     "session_id": "session_20250831_091456_0",
     "user_input": "what is the full name of this school",
-    "bot_response": "EADE Business School is an educational institution known as Escuela de Alta DirecciÃ³n Empresarial.",
+    "bot_response": "EADE Business School is an educational institution known as Escuela de Alta DirecciÃƒÆ’Ã‚Â³n Empresarial.",
     "intent": "general",
     "entities": {},
     "confidence": 0.6041203141212463,
@@ -45,7 +45,7 @@
   {
     "session_id": "session_20250831_091456_0",
     "user_input": "what is the full name of this school",
-    "bot_response": "The full name of EADE Business School is Escuela de Alta DirecciÓn Empresarial.",
+    "bot_response": "The full name of EADE Business School is Escuela de Alta DirecciÃƒâ€œn Empresarial.",
     "intent": "general",
     "entities": {},
     "confidence": 0.6041203141212463,
@@ -197,5 +197,41 @@
     },
     "confidence": 0.8585440218448639,
     "timestamp": "2025-08-31T13:40:41.822928"
+  },
+  {
+    "session_id": "session_20250901_093157_0",
+    "user_input": "Hey",
+    "bot_response": "Good morning! I'm here to help with information about EADE Business School. How can I assist you?",
+    "intent": "general",
+    "entities": {},
+    "confidence": 0.9,
+    "timestamp": "2025-09-01T09:31:57.743526"
+  },
+  {
+    "session_id": "session_20250901_093157_0",
+    "user_input": "I want to know about your service",
+    "bot_response": "Thank you for your interest in EADE Business School! Our service aims to provide a comprehensive learning experience that focuses on the holistic development of change agents through innovative and updated programs. Our programs are designed to promote entrepreneurial, managerial, and leadership competencies, allowing students to acquire the skills they need to succeed in today's dynamic business environment. If you have any further questions, please don't hesitate to ask.",
+    "intent": "general",
+    "entities": {},
+    "confidence": 0.30783432722091675,
+    "timestamp": "2025-09-01T09:32:30.698529"
+  },
+  {
+    "session_id": "session_20250901_094400_1",
+    "user_input": "Online learning options",
+    "bot_response": "Dear user,\n\nThank you for your interest in EADE Business School's online learning options. We offer a variety of practical and flexible learning experiences designed to cater to different learning styles and preferences. Our courses are designed to provide immediate application of knowledge in professional settings through case studies, industry integrations, and 'Learning by Doing' methods.\n\nHere are some of our popular online learning options:\n\n1. Executive MBA: A comprehensive program that combines theory and practical applications to develop leadership skills and enhance career prospects.\n2. Open Learning Program: Flexible, self-paced courses that allow you to learn at your own pace and on your own schedule.\n3. Specialized Programs: Tailored programs that focus on specific areas of business, such as finance, marketing, or",
+    "intent": "general",
+    "entities": {},
+    "confidence": 0.4670180082321167,
+    "timestamp": "2025-09-01T09:44:40.862321"
+  },
+  {
+    "session_id": "session_20250901_094400_1",
+    "user_input": "tell me about online learning options",
+    "bot_response": "Dear user,\n\nThank you for reaching out to EADE Business School. We offer a variety of online learning options that cater to different learning styles and preferences. Our courses are designed to provide practical learning experiences that integrate industry practices and 'Learning by Doing' methodologies. \n\nOur online learning platform provides access to a wide range of courses, including bachelor's and master's degrees, executive education, and professional development programs. We also offer flexible scheduling options to accommodate your busy lifestyle.\n\nWhether you're a student or an industry professional, our online learning options will provide you with the skills and knowledge required to succeed in today's competitive business landscape.\n\nPlease let me know if you need further assistance or have any questions about our online learning options.\n\nBest regards,\n[Your",
+    "intent": "general",
+    "entities": {},
+    "confidence": 0.484788179397583,
+    "timestamp": "2025-09-01T09:48:43.946756"
   }
 ]

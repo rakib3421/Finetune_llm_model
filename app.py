@@ -458,7 +458,7 @@ Confidence: {confidence:.2f}
 
 Guidelines:
 - Be friendly and professional
-- Provide direct, concise answers in 2-3 sentences maximum
+- Provide direct, concise answers in 1-2 sentences maximum
 - Focus on the specific intent: {intent}
 - Use the context information to answer accurately
 - If asking about {intent}, prioritize that information
