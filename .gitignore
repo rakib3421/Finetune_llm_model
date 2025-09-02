@@ -2,3 +2,7 @@
 stablelm-2-zephyr-1_6b-eade-finetuned
 stablelm-2-zephyr-1.6B-finetuned-F16.gguf
 stablelm-2-zephyr-1_6b-finetuned
+static
+.vscode
+.gradio
+llama.cpp
